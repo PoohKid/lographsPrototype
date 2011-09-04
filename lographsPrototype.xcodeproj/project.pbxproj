@@ -18,6 +18,12 @@
 		0559CCFE1411269D001DC928 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0559CCFD1411269D001DC928 /* SecondViewController.m */; };
 		0559CD011411269D001DC928 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0559CCFF1411269D001DC928 /* FirstView.xib */; };
 		0559CD041411269D001DC928 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0559CD021411269D001DC928 /* SecondView.xib */; };
+		05FBFBEC141376F8006AC2D9 /* EntryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FBFBEA141376F8006AC2D9 /* EntryListViewController.m */; };
+		05FBFBED141376F8006AC2D9 /* EntryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FBFBEB141376F8006AC2D9 /* EntryListViewController.xib */; };
+		05FBFBF91413878A006AC2D9 /* EntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FBFBF81413878A006AC2D9 /* EntryCell.m */; };
+		05FBFBFB141387B0006AC2D9 /* EntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FBFBFA141387B0006AC2D9 /* EntryCell.xib */; };
+		05FBFBFF14139BEB006AC2D9 /* EntryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FBFBFD14139BEB006AC2D9 /* EntryDetailViewController.m */; };
+		05FBFC0014139BEB006AC2D9 /* EntryDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FBFBFE14139BEB006AC2D9 /* EntryDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,19 +31,28 @@
 		0559CCE41411269D001DC928 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0559CCE61411269D001DC928 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0559CCE81411269D001DC928 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0559CCEC1411269D001DC928 /* lographsPrototype-Info.plist */ = {isa = PBXFileReference; path = "lographsPrototype-Info.plist"; sourceTree = "<group>"; };
+		0559CCEC1411269D001DC928 /* lographsPrototype-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "lographsPrototype-Info.plist"; sourceTree = "<group>"; };
 		0559CCEE1411269D001DC928 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0559CCF01411269D001DC928 /* lographsPrototype-Prefix.pch */ = {isa = PBXFileReference; path = "lographsPrototype-Prefix.pch"; sourceTree = "<group>"; };
+		0559CCF01411269D001DC928 /* lographsPrototype-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lographsPrototype-Prefix.pch"; sourceTree = "<group>"; };
 		0559CCF11411269D001DC928 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0559CCF31411269D001DC928 /* lographsPrototypeAppDelegate.h */ = {isa = PBXFileReference; path = lographsPrototypeAppDelegate.h; sourceTree = "<group>"; };
+		0559CCF31411269D001DC928 /* lographsPrototypeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lographsPrototypeAppDelegate.h; sourceTree = "<group>"; };
 		0559CCF41411269D001DC928 /* lographsPrototypeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lographsPrototypeAppDelegate.m; sourceTree = "<group>"; };
 		0559CCF71411269D001DC928 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		0559CCF91411269D001DC928 /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		0559CCF91411269D001DC928 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		0559CCFA1411269D001DC928 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		0559CCFC1411269D001DC928 /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		0559CCFC1411269D001DC928 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		0559CCFD1411269D001DC928 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		0559CD001411269D001DC928 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
 		0559CD031411269D001DC928 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+		05FBFBE9141376F8006AC2D9 /* EntryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryListViewController.h; sourceTree = "<group>"; };
+		05FBFBEA141376F8006AC2D9 /* EntryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryListViewController.m; sourceTree = "<group>"; };
+		05FBFBEB141376F8006AC2D9 /* EntryListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryListViewController.xib; sourceTree = "<group>"; };
+		05FBFBF71413878A006AC2D9 /* EntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryCell.h; sourceTree = "<group>"; };
+		05FBFBF81413878A006AC2D9 /* EntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryCell.m; sourceTree = "<group>"; };
+		05FBFBFA141387B0006AC2D9 /* EntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryCell.xib; sourceTree = "<group>"; };
+		05FBFBFC14139BEB006AC2D9 /* EntryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryDetailViewController.h; sourceTree = "<group>"; };
+		05FBFBFD14139BEB006AC2D9 /* EntryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryDetailViewController.m; sourceTree = "<group>"; };
+		05FBFBFE14139BEB006AC2D9 /* EntryDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +109,15 @@
 				0559CCFF1411269D001DC928 /* FirstView.xib */,
 				0559CD021411269D001DC928 /* SecondView.xib */,
 				0559CCEB1411269D001DC928 /* Supporting Files */,
+				05FBFBE9141376F8006AC2D9 /* EntryListViewController.h */,
+				05FBFBEA141376F8006AC2D9 /* EntryListViewController.m */,
+				05FBFBEB141376F8006AC2D9 /* EntryListViewController.xib */,
+				05FBFBF71413878A006AC2D9 /* EntryCell.h */,
+				05FBFBF81413878A006AC2D9 /* EntryCell.m */,
+				05FBFBFA141387B0006AC2D9 /* EntryCell.xib */,
+				05FBFBFC14139BEB006AC2D9 /* EntryDetailViewController.h */,
+				05FBFBFD14139BEB006AC2D9 /* EntryDetailViewController.m */,
+				05FBFBFE14139BEB006AC2D9 /* EntryDetailViewController.xib */,
 			);
 			path = lographsPrototype;
 			sourceTree = "<group>";
@@ -160,6 +184,9 @@
 				0559CCF81411269D001DC928 /* MainWindow.xib in Resources */,
 				0559CD011411269D001DC928 /* FirstView.xib in Resources */,
 				0559CD041411269D001DC928 /* SecondView.xib in Resources */,
+				05FBFBED141376F8006AC2D9 /* EntryListViewController.xib in Resources */,
+				05FBFBFB141387B0006AC2D9 /* EntryCell.xib in Resources */,
+				05FBFC0014139BEB006AC2D9 /* EntryDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +201,9 @@
 				0559CCF51411269D001DC928 /* lographsPrototypeAppDelegate.m in Sources */,
 				0559CCFB1411269D001DC928 /* FirstViewController.m in Sources */,
 				0559CCFE1411269D001DC928 /* SecondViewController.m in Sources */,
+				05FBFBEC141376F8006AC2D9 /* EntryListViewController.m in Sources */,
+				05FBFBF91413878A006AC2D9 /* EntryCell.m in Sources */,
+				05FBFBFF14139BEB006AC2D9 /* EntryDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +324,7 @@
 				0559CD091411269D001DC928 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
