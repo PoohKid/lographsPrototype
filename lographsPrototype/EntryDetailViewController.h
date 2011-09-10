@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-
 @interface EntryDetailViewController : UIViewController {
-    
+    NSDictionary *entry;
+
+    IBOutlet UILabel *nameLabel;
+    IBOutlet UITextField *amountText;
 }
+
+@property (nonatomic, retain) NSDictionary *entry;
+
+- (IBAction)tapAddButton:(id)sender;
 
 @end

@@ -9,6 +9,8 @@
 #import "EntryListViewController.h"
 #import "EntryCell.h"
 #import "EntryDetailViewController.h"
+#import "LographsModel.h"
+#import "NSDictionary+Null.h"
 
 @implementation EntryListViewController
 
@@ -47,13 +49,14 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
-    entryList_ = [[NSArray arrayWithObjects:
-                   @"お昼寝の時間",
-                   @"間食",
-                   @"イライラ",
-                   @"子供の身長",
-                   @"子供の体重",
-                   nil] retain];
+    //entryList_ = [[NSArray arrayWithObjects:
+    //               @"お昼寝の時間",
+    //               @"間食",
+    //               @"イライラ",
+    //               @"子供の身長",
+    //               @"子供の体重",
+    //               nil] retain];
+
     self.tableView.rowHeight = 61.0;
 }
 
@@ -68,6 +71,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+
+    [entryList_ release], entryList_ = nil;
+    entryList_ = [[[LographsModel sharedLographsModel] entryList] retain];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -96,13 +103,21 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return [entryList_ count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSDictionary *daily = [entryList_ objectAtIndex:section];
+    return [daily objectForKey:@"date"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [entryList_ count];
+    NSDictionary *daily = [entryList_ objectAtIndex:section];
+    NSArray *entriesOfDate = [daily objectForKey:@"entriesOfDate"];
+    return [entriesOfDate count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -128,33 +143,30 @@
 //    NSLog(@"%@, %@, %f", text, font.fontName, font.pointSize); //2011/08/23 08:21, Helvetica, 12.000000
 //    NSLog(@"%f, %f", size.width, size.height); //95.000000, 15.000000
 
+    //NSDate *date = [[NSDate alloc] initWithString:@"2011-08-23 08:21:00 +0900"];
+    //NSTimeInterval timeInterval = [date timeIntervalSince1970];
+    //NSLog(@"2011-08-23 08:21:00 %f", timeInterval); //1314055260.000000
+    //[date release];
+
     // Configure the cell...
-    //cell.textLabel.text = [entryList_ objectAtIndex:indexPath.row];
-    switch (indexPath.row) {
-        case 0:
-            cell.titleLabel.text = [entryList_ objectAtIndex:indexPath.row];
-            cell.dateLabel.text = @"2011/08/23 08:21";
-            cell.amountLabel.text = @"1回";
+    NSDictionary *daily = [entryList_ objectAtIndex:indexPath.section];
+    NSArray *entriesOfDate = [daily objectForKey:@"entriesOfDate"];
+    NSDictionary *entry = [entriesOfDate objectAtIndex:indexPath.row];
+
+    cell.titleLabel.text = [entry objectForKeyNull:@"name"];
+    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    [dateFormatter setDateFormat:@"yyyy/MM/dd HH:mm"];
+    cell.dateLabel.text = [dateFormatter stringFromDate:[entry objectForKeyNull:@"date"]];
+    switch ([[entry objectForKeyNull:@"type"] intValue]) {
+        case LographsItemTypeNormal:
+            cell.amountLabel.text = [NSString stringWithFormat:@"%@%@",
+                                     [entry objectForKeyNull:@"amount"],
+                                     [entry objectForKeyNull:@"unit"]];
             break;
-        case 1:
-            cell.titleLabel.text = [entryList_ objectAtIndex:indexPath.row];
-            cell.dateLabel.text = @"2011/08/23 08:21";
-            cell.amountLabel.text = @"1回";
-            break;
-        case 2:
-            cell.titleLabel.text = [entryList_ objectAtIndex:indexPath.row];
-            cell.dateLabel.text = @"2011/08/23 08:21";
-            cell.amountLabel.text = @"☆☆";
-            break;
-        case 3:
-            cell.titleLabel.text = [entryList_ objectAtIndex:indexPath.row];
-            cell.dateLabel.text = @"2011/08/23 08:21";
-            cell.amountLabel.text = @"30cm";
-            break;
-        case 4:
-            cell.titleLabel.text = [entryList_ objectAtIndex:indexPath.row];
-            cell.dateLabel.text = @"2011/08/23 08:21";
-            cell.amountLabel.text = @"12Kg";
+        case LographsItemTypeStar:
+            cell.amountLabel.text = [@"" stringByPaddingToLength:[[entry objectForKeyNull:@"amount"] intValue]
+                                                      withString:@"☆"
+                                                 startingAtIndex:0];
             break;
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -204,10 +216,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    EntryDetailViewController *entryDetailViewController = [[EntryDetailViewController alloc] initWithNibName:@"EntryDetailViewController" bundle:nil];
+    NSDictionary *daily = [entryList_ objectAtIndex:indexPath.section];
+    NSArray *entriesOfDate = [daily objectForKey:@"entriesOfDate"];
+    NSDictionary *entry = [entriesOfDate objectAtIndex:indexPath.row];
 
-    // Pass the selected object to the new view controller.
+    EntryDetailViewController *entryDetailViewController = [[EntryDetailViewController alloc] initWithNibName:@"EntryDetailViewController" bundle:nil];
+    entryDetailViewController.entry = entry;
     [self.navigationController pushViewController:entryDetailViewController animated:YES];
     [entryDetailViewController release];
 }

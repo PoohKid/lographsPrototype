@@ -18,6 +18,16 @@
 		0559CCFE1411269D001DC928 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0559CCFD1411269D001DC928 /* SecondViewController.m */; };
 		0559CD011411269D001DC928 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0559CCFF1411269D001DC928 /* FirstView.xib */; };
 		0559CD041411269D001DC928 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0559CD021411269D001DC928 /* SecondView.xib */; };
+		05F26DB0141BBB64007F518C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F26DAE141BBB64007F518C /* Icon.png */; };
+		05F26DB1141BBB64007F518C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F26DAF141BBB64007F518C /* Icon@2x.png */; };
+		05F26DBD141BC250007F518C /* lographs.db in Resources */ = {isa = PBXBuildFile; fileRef = 05F26DBC141BC250007F518C /* lographs.db */; };
+		05F26DC6141BC328007F518C /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F26DC1141BC328007F518C /* FMDatabase.m */; };
+		05F26DC7141BC328007F518C /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F26DC3141BC328007F518C /* FMDatabaseAdditions.m */; };
+		05F26DC8141BC328007F518C /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F26DC5141BC328007F518C /* FMResultSet.m */; };
+		05F26DCA141BC3A0007F518C /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 05F26DC9141BC3A0007F518C /* libsqlite3.0.dylib */; };
+		05F26DCF141BC67B007F518C /* CityData.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F26DCE141BC67B007F518C /* CityData.m */; };
+		05F26DD2141BC7C1007F518C /* LographsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F26DD1141BC7C1007F518C /* LographsModel.m */; };
+		05F26DDD141BEBA4007F518C /* NSDictionary+Null.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F26DDC141BEBA3007F518C /* NSDictionary+Null.m */; };
 		05FBFBEC141376F8006AC2D9 /* EntryListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FBFBEA141376F8006AC2D9 /* EntryListViewController.m */; };
 		05FBFBED141376F8006AC2D9 /* EntryListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05FBFBEB141376F8006AC2D9 /* EntryListViewController.xib */; };
 		05FBFBF91413878A006AC2D9 /* EntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FBFBF81413878A006AC2D9 /* EntryCell.m */; };
@@ -44,6 +54,22 @@
 		0559CCFD1411269D001DC928 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		0559CD001411269D001DC928 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
 		0559CD031411269D001DC928 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+		05F26DAE141BBB64007F518C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		05F26DAF141BBB64007F518C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		05F26DBC141BC250007F518C /* lographs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = lographs.db; sourceTree = "<group>"; };
+		05F26DC0141BC328007F518C /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		05F26DC1141BC328007F518C /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		05F26DC2141BC328007F518C /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		05F26DC3141BC328007F518C /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		05F26DC4141BC328007F518C /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		05F26DC5141BC328007F518C /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		05F26DC9141BC3A0007F518C /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		05F26DCD141BC67B007F518C /* CityData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityData.h; sourceTree = "<group>"; };
+		05F26DCE141BC67B007F518C /* CityData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityData.m; sourceTree = "<group>"; };
+		05F26DD0141BC7C1007F518C /* LographsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LographsModel.h; sourceTree = "<group>"; };
+		05F26DD1141BC7C1007F518C /* LographsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LographsModel.m; sourceTree = "<group>"; };
+		05F26DDB141BEBA3007F518C /* NSDictionary+Null.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Null.h"; sourceTree = "<group>"; };
+		05F26DDC141BEBA3007F518C /* NSDictionary+Null.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Null.m"; sourceTree = "<group>"; };
 		05FBFBE9141376F8006AC2D9 /* EntryListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryListViewController.h; sourceTree = "<group>"; };
 		05FBFBEA141376F8006AC2D9 /* EntryListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryListViewController.m; sourceTree = "<group>"; };
 		05FBFBEB141376F8006AC2D9 /* EntryListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryListViewController.xib; sourceTree = "<group>"; };
@@ -63,6 +89,7 @@
 				0559CCE51411269D001DC928 /* UIKit.framework in Frameworks */,
 				0559CCE71411269D001DC928 /* Foundation.framework in Frameworks */,
 				0559CCE91411269D001DC928 /* CoreGraphics.framework in Frameworks */,
+				05F26DCA141BC3A0007F518C /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +119,7 @@
 				0559CCE41411269D001DC928 /* UIKit.framework */,
 				0559CCE61411269D001DC928 /* Foundation.framework */,
 				0559CCE81411269D001DC928 /* CoreGraphics.framework */,
+				05F26DC9141BC3A0007F518C /* libsqlite3.0.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,6 +127,8 @@
 		0559CCEA1411269D001DC928 /* lographsPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				05F26DBE141BC328007F518C /* Libraries */,
+				05F26DCB141BC469007F518C /* Classes */,
 				0559CCF31411269D001DC928 /* lographsPrototypeAppDelegate.h */,
 				0559CCF41411269D001DC928 /* lographsPrototypeAppDelegate.m */,
 				0559CCF61411269D001DC928 /* MainWindow.xib */,
@@ -118,6 +148,7 @@
 				05FBFBFC14139BEB006AC2D9 /* EntryDetailViewController.h */,
 				05FBFBFD14139BEB006AC2D9 /* EntryDetailViewController.m */,
 				05FBFBFE14139BEB006AC2D9 /* EntryDetailViewController.xib */,
+				05F26DAC141BBB64007F518C /* Resources */,
 			);
 			path = lographsPrototype;
 			sourceTree = "<group>";
@@ -131,6 +162,74 @@
 				0559CCF11411269D001DC928 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		05F26DAC141BBB64007F518C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				05F26DBB141BC250007F518C /* Databases */,
+				05F26DAD141BBB64007F518C /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		05F26DAD141BBB64007F518C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				05F26DAE141BBB64007F518C /* Icon.png */,
+				05F26DAF141BBB64007F518C /* Icon@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		05F26DBB141BC250007F518C /* Databases */ = {
+			isa = PBXGroup;
+			children = (
+				05F26DBC141BC250007F518C /* lographs.db */,
+			);
+			path = Databases;
+			sourceTree = "<group>";
+		};
+		05F26DBE141BC328007F518C /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				05F26DBF141BC328007F518C /* FMDB */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		05F26DBF141BC328007F518C /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				05F26DC0141BC328007F518C /* FMDatabase.h */,
+				05F26DC1141BC328007F518C /* FMDatabase.m */,
+				05F26DC2141BC328007F518C /* FMDatabaseAdditions.h */,
+				05F26DC3141BC328007F518C /* FMDatabaseAdditions.m */,
+				05F26DC4141BC328007F518C /* FMResultSet.h */,
+				05F26DC5141BC328007F518C /* FMResultSet.m */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		05F26DCB141BC469007F518C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				05F26DCC141BC469007F518C /* Model */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		05F26DCC141BC469007F518C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05F26DCD141BC67B007F518C /* CityData.h */,
+				05F26DCE141BC67B007F518C /* CityData.m */,
+				05F26DDB141BEBA3007F518C /* NSDictionary+Null.h */,
+				05F26DDC141BEBA3007F518C /* NSDictionary+Null.m */,
+				05F26DD0141BC7C1007F518C /* LographsModel.h */,
+				05F26DD1141BC7C1007F518C /* LographsModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +286,9 @@
 				05FBFBED141376F8006AC2D9 /* EntryListViewController.xib in Resources */,
 				05FBFBFB141387B0006AC2D9 /* EntryCell.xib in Resources */,
 				05FBFC0014139BEB006AC2D9 /* EntryDetailViewController.xib in Resources */,
+				05F26DB0141BBB64007F518C /* Icon.png in Resources */,
+				05F26DB1141BBB64007F518C /* Icon@2x.png in Resources */,
+				05F26DBD141BC250007F518C /* lographs.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +306,12 @@
 				05FBFBEC141376F8006AC2D9 /* EntryListViewController.m in Sources */,
 				05FBFBF91413878A006AC2D9 /* EntryCell.m in Sources */,
 				05FBFBFF14139BEB006AC2D9 /* EntryDetailViewController.m in Sources */,
+				05F26DC6141BC328007F518C /* FMDatabase.m in Sources */,
+				05F26DC7141BC328007F518C /* FMDatabaseAdditions.m in Sources */,
+				05F26DC8141BC328007F518C /* FMResultSet.m in Sources */,
+				05F26DCF141BC67B007F518C /* CityData.m in Sources */,
+				05F26DD2141BC7C1007F518C /* LographsModel.m in Sources */,
+				05F26DDD141BEBA4007F518C /* NSDictionary+Null.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
