@@ -18,6 +18,7 @@
 		0559CCFE1411269D001DC928 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0559CCFD1411269D001DC928 /* SecondViewController.m */; };
 		0559CD011411269D001DC928 /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0559CCFF1411269D001DC928 /* FirstView.xib */; };
 		0559CD041411269D001DC928 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0559CD021411269D001DC928 /* SecondView.xib */; };
+		05B7F83E142E1EA900534522 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 05B7F83D142E1EA900534522 /* README.md */; };
 		05F26DB0141BBB64007F518C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F26DAE141BBB64007F518C /* Icon.png */; };
 		05F26DB1141BBB64007F518C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 05F26DAF141BBB64007F518C /* Icon@2x.png */; };
 		05F26DBD141BC250007F518C /* lographs.db in Resources */ = {isa = PBXBuildFile; fileRef = 05F26DBC141BC250007F518C /* lographs.db */; };
@@ -54,6 +55,7 @@
 		0559CCFD1411269D001DC928 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		0559CD001411269D001DC928 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
 		0559CD031411269D001DC928 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
+		05B7F83D142E1EA900534522 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 		05F26DAE141BBB64007F518C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		05F26DAF141BBB64007F518C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		05F26DBC141BC250007F518C /* lographs.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = lographs.db; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 		0559CCEA1411269D001DC928 /* lographsPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				05B7F83D142E1EA900534522 /* README.md */,
 				05F26DBE141BC328007F518C /* Libraries */,
 				05F26DCB141BC469007F518C /* Classes */,
 				0559CCF31411269D001DC928 /* lographsPrototypeAppDelegate.h */,
@@ -289,6 +292,7 @@
 				05F26DB0141BBB64007F518C /* Icon.png in Resources */,
 				05F26DB1141BBB64007F518C /* Icon@2x.png in Resources */,
 				05F26DBD141BC250007F518C /* lographs.db in Resources */,
+				05B7F83E142E1EA900534522 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
