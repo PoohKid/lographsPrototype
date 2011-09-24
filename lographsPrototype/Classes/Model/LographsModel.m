@@ -155,38 +155,6 @@ static LographsModel *sharedLographsModel_ = nil;
             NSLog(@"Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
         }
 
-//        for (NSDictionary *area in areaList) {
-//            int areaId = [self areaMaxId:db] + 1;
-//            
-//            [db executeUpdate:@"INSERT INTO Area (area_id, name) VALUES (?, ?)",
-//             [NSNumber numberWithInt:areaId],
-//             [area objectForKey:@"name"]];
-//            if ([db hadError]) {
-//                NSLog(@"Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
-//            }
-//            
-//            for (NSDictionary *city in [area objectForKey:@"cities"]) {
-//                int cityId = [self cityMaxId:db] + 1;
-//                
-//                [db executeUpdate:@"INSERT INTO City "
-//                 @"(city_id, area_id, name, kana, population, explanation, logo, url, latitude, longitude) "
-//                 @"VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-//                 [NSNumber numberWithInt:cityId],
-//                 [NSNumber numberWithInt:areaId],
-//                 [city objectForKey:@"name"],
-//                 [city objectForKey:@"kana"],
-//                 [city objectForKey:@"population"],
-//                 [city objectForKey:@"explanation"],
-//                 [city objectForKey:@"logo"],
-//                 [city objectForKey:@"url"],
-//                 [city objectForKey:@"latitude"],
-//                 [city objectForKey:@"longitude"]];
-//                if ([db hadError]) {
-//                    NSLog(@"Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
-//                }
-//            }
-//        }
-        
         [db commit];
         [db close];
     } else {
